@@ -1,0 +1,12 @@
+﻿node_modules/
+dist/
+out/
+release/
+build/
+.DS_Store/
+.eslintcache/
+*.log*
+*.exe
+*.zip
+*.rar
+.env

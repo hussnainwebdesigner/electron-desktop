@@ -1,0 +1,89 @@
+{
+  "name": "electron-app",
+  "version": "1.0.1",
+  "proxy": "https://pharmacy-db-software-server.vercel.app",
+  "description": "An Electron application with React",
+  "main": "./dist/main/index.js",
+  "author": "hussnainwebdesigner",
+  "homepage": "https://electron-vite.org",
+  "scripts": {
+    "format": "prettier --write .",
+    "lint": "eslint --cache .",
+    "start": "electron-vite preview",
+    "dev": "electron-vite dev -- --force",
+    "build": "electron-vite build",
+    "postinstall": "electron-builder install-app-deps",
+    "build:unpack": "npm run build && electron-builder --dir",
+    "build:win": "npm run build && electron-builder --win",
+    "build:mac": "npm run build && electron-builder --mac",
+    "build:linux": "npm run build && electron-builder --linux",
+    "dist": "npm run build && electron-builder --publish always"
+  },
+  "build": {
+    "appId": "com.hussnainwebdesigner.accounting",
+    "productName": "Accounting Software",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "node_modules/**/*"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.ico",
+      "publish": [
+        "github"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "perMachine": true,
+      "allowElevation": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "deleteAppDataOnUninstall": false,
+      "runAfterFinish": true,
+      "guid": "com.hussnainwebdesigner.accounting"
+    },
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "hussnainwebdesigner",
+        "repo": "electron-app",
+        "private": false,
+        "releaseType": "release"
+      }
+    ]
+  },
+  "dependencies": {
+    "@electron-toolkit/preload": "^3.0.2",
+    "@electron-toolkit/utils": "^4.0.0",
+    "@tailwindcss/vite": "^4.2.4",
+    "axios": "^1.15.2",
+    "electron-log": "^5.4.4",
+    "electron-store": "^11.0.2",
+    "electron-updater": "^6.8.3",
+    "react-hot-toast": "^2.6.0",
+    "react-to-print": "^3.3.0",
+    "tailwindcss": "^4.2.4"
+  },
+  "devDependencies": {
+    "@electron-toolkit/eslint-config": "^2.1.0",
+    "@electron-toolkit/eslint-config-prettier": "^3.0.0",
+    "@vitejs/plugin-react": "^5.1.1",
+    "electron": "^39.2.6",
+    "electron-builder": "^26.8.1",
+    "electron-vite": "^5.0.0",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "prettier": "^3.7.4",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "rollup-plugin-visualizer": "^7.0.1",
+    "vite": "^7.2.6"
+  }
+}

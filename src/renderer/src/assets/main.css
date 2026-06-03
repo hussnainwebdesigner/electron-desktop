@@ -1,0 +1,66 @@
+
+
+@import "tailwindcss";
+
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  bgcolor: #FAFAFE;
+  
+}
+
+
+.overflow-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+/* Make the title bar draggable */
+.titlebar {
+  -webkit-app-region: drag;
+}
+
+/* Prevent dragging on interactive elements */
+.no-drag {
+  -webkit-app-region: no-drag;
+}
+
+/* Ensure dropdown menus don't interfere with dragging */
+.menu-dropdown {
+  -webkit-app-region: no-drag;
+}
+
+/* Optional: Smooth transitions for window controls */
+.titlebar button {
+  transition: all 0.2s ease;
+}
+
+/* Make sure the app takes full height */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1f2937;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4b5563;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
