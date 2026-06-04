@@ -688,7 +688,7 @@ const PrintInvoice = ({ setIsEdit, setPageNavigate, selectedInvoice, setSelected
     }
   }, [selectedInvoice, setPageNavigate]);
 
-  Loading state
+  // Loading state
   if (loading) {
     return (
       <div className="flex justify-center items-center h-screen bg-gray-100">
