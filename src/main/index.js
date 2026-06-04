@@ -396,6 +396,7 @@ autoUpdater.logger = log
 autoUpdater.logger.transports.file.level = 'info'
 log.info('App starting...')
 
+
 // Track update status
 let updateAvailable = false
 let downloadedUpdate = false

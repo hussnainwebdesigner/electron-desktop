@@ -6,6 +6,11 @@
   "main": "./dist/main/index.js",
   "author": "hussnainwebdesigner",
   "homepage": "https://electron-vite.org",
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/hussnainwebdesigner/electron-desktop.git",
+    "directory": "electron-app"
+  },
   "scripts": {
     "format": "prettier --write .",
     "lint": "eslint --cache .",
@@ -17,10 +22,10 @@
     "build:win": "npm run build && electron-builder --win",
     "build:mac": "npm run build && electron-builder --mac",
     "build:linux": "npm run build && electron-builder --linux",
-    "dist": "npm run build && electron-builder --publish always"
+    "dist": "npm run build && electron-builder --publish never"
   },
   "build": {
-    "appId": "com.hussnainwebdesigner.accounting",
+    "appId": "com.hussnainwebdesigner.electron-desktop",
     "productName": "Accounting Software",
     "directories": {
       "output": "release"
@@ -31,10 +36,7 @@
     ],
     "win": {
       "target": "nsis",
-      "icon": "build/icon.ico",
-      "publish": [
-        "github"
-      ]
+      "icon": "build/icon.ico"
     },
     "nsis": {
       "oneClick": false,
@@ -45,15 +47,13 @@
       "createStartMenuShortcut": true,
       "deleteAppDataOnUninstall": false,
       "runAfterFinish": true,
-      "guid": "com.hussnainwebdesigner.accounting"
+      "guid": "com.hussnainwebdesigner.electron-desktop"
     },
     "publish": [
       {
         "provider": "github",
         "owner": "hussnainwebdesigner",
-        "repo": "electron-app",
-        "private": false,
-        "releaseType": "release"
+        "repo": "electron-desktop"      
       }
     ]
   },
@@ -73,7 +73,7 @@
     "@electron-toolkit/eslint-config": "^2.1.0",
     "@electron-toolkit/eslint-config-prettier": "^3.0.0",
     "@vitejs/plugin-react": "^5.1.1",
-    "electron": "^39.2.6",
+    "electron": "^39.8.10",
     "electron-builder": "^26.8.1",
     "electron-vite": "^5.0.0",
     "eslint": "^9.39.1",

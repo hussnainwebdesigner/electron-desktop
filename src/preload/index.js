@@ -58,7 +58,7 @@
 //       // Check if cookie exists
 //       checkCookie: async (name) => {
 //         return await ipcRenderer.invoke('cookie:get', {
-//           url: 'http://localhost:5000',
+//           url: 'https://pharmacy-db-software-server.vercel.app',
 //           name: name
 //         });
 //       },
@@ -75,7 +75,7 @@
 //       // Cookie management - ADD THESE
 //       setCookie: async (name, value) => {
 //         return await ipcRenderer.invoke('cookie:set', {
-//           url: 'http://localhost:5000',
+//           url: 'https://pharmacy-db-software-server.vercel.app',
 //           name: name,
 //           value: value
 //         })
@@ -83,14 +83,14 @@
 
 //       getCookie: async (name) => {
 //         return await ipcRenderer.invoke('cookie:get', {
-//           url: 'http://localhost:5000',
+//           url: 'https://pharmacy-db-software-server.vercel.app',
 //           name: name
 //         })
 //       },
 
 //       clearCookie: async (name) => {
 //         return await ipcRenderer.invoke('cookie:remove', {
-//           url: 'http://localhost:5000',
+//           url: 'https://pharmacy-db-software-server.vercel.app',
 //           name: name
 //         })
 //       },
@@ -160,20 +160,20 @@
 //     // Cookie management
 //     setCookie: async (name, value) => {
 //       return await ipcRenderer.invoke('cookie:set', {
-//         url: 'http://localhost:5000',
+//         url: 'https://pharmacy-db-software-server.vercel.app',
 //         name: name,
 //         value: value
 //       })
 //     },
 //     getCookie: async (name) => {
 //       return await ipcRenderer.invoke('cookie:get', {
-//         url: 'http://localhost:5000',
+//         url: 'https://pharmacy-db-software-server.vercel.app',
 //         name: name
 //       })
 //     },
 //     clearCookie: async (name) => {
 //       return await ipcRenderer.invoke('cookie:remove', {
-//         url: 'http://localhost:5000',
+//         url: 'https://pharmacy-db-software-server.vercel.app',
 //         name: name
 //       })
 //     },
@@ -252,26 +252,26 @@ if (process.contextIsolated) {
       },
       checkCookie: async (name) => {
         return await ipcRenderer.invoke('cookie:get', {
-          url: 'http://localhost:5000',
+          url: 'https://pharmacy-db-software-server.vercel.app',
           name: name
         })
       },
       setCookie: async (name, value) => {
         return await ipcRenderer.invoke('cookie:set', {
-          url: 'http://localhost:5000',
+          url: 'https://pharmacy-db-software-server.vercel.app',
           name: name,
           value: value
         })
       },
       getCookie: async (name) => {
         return await ipcRenderer.invoke('cookie:get', {
-          url: 'http://localhost:5000',
+          url: 'https://pharmacy-db-software-server.vercel.app',
           name: name
         })
       },
       clearCookie: async (name) => {
         return await ipcRenderer.invoke('cookie:remove', {
-          url: 'http://localhost:5000',
+          url: 'https://pharmacy-db-software-server.vercel.app',
           name: name
         })
       },
@@ -336,20 +336,20 @@ if (process.contextIsolated) {
     },
     setCookie: async (name, value) => {
       return await ipcRenderer.invoke('cookie:set', {
-        url: 'http://localhost:5000',
+        url: 'https://pharmacy-db-software-server.vercel.app',
         name: name,
         value: value
       })
     },
     getCookie: async (name) => {
       return await ipcRenderer.invoke('cookie:get', {
-        url: 'http://localhost:5000',
+        url: 'https://pharmacy-db-software-server.vercel.app',
         name: name
       })
     },
     clearCookie: async (name) => {
       return await ipcRenderer.invoke('cookie:remove', {
-        url: 'http://localhost:5000',
+        url: 'https://pharmacy-db-software-server.vercel.app',
         name: name
       })
     },
