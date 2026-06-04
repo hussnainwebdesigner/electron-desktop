@@ -1,7 +1,10 @@
-appId: com.electron.app
-productName: electron-app
+appId: com.hussnainwebdesigner.electron-desktop
+productName: Accounting Software
 directories:
   buildResources: build
+  extraResources:
+  - from: build/
+    to: .
 files:
   - '!**/.vscode/*'
   - '!src/*'
@@ -11,7 +14,7 @@ files:
 asarUnpack:
   - resources/**
 win:
-  executableName: electron-app
+  executableName: Accounting Software
 nsis:
   artifactName: ${name}-${version}-setup.${ext}
   shortcutName: ${productName}
@@ -39,6 +42,6 @@ appImage:
 npmRebuild: false
 publish:
   provider: generic
-  url: https://example.com/auto-updates
+  url: https://pharmacy-db-software-server.vercel.app/updates
 electronDownload:
   mirror: https://npmmirror.com/mirrors/electron/

@@ -22,7 +22,7 @@
     "build:win": "npm run build && electron-builder --win",
     "build:mac": "npm run build && electron-builder --mac",
     "build:linux": "npm run build && electron-builder --linux",
-    "dist": "npm run build && electron-builder --publish never"
+    "dist": "npm run build && electron-builder --win --publish always"
   },
   "build": {
     "appId": "com.hussnainwebdesigner.electron-desktop",
@@ -35,10 +35,12 @@
       "node_modules/**/*"
     ],
     "win": {
+      "executableName": "Accounting Software",
       "target": "nsis",
       "icon": "build/icon.ico"
     },
     "nsis": {
+      "artifactName": "${productName} Setup ${version}.${ext}",
       "oneClick": false,
       "allowToChangeInstallationDirectory": true,
       "perMachine": true,
@@ -53,7 +55,9 @@
       {
         "provider": "github",
         "owner": "hussnainwebdesigner",
-        "repo": "electron-desktop"      
+        "repo": "electron-desktop",
+        "releaseType": "release",
+        "private": false
       }
     ]
   },
