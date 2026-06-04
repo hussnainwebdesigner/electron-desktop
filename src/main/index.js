@@ -422,9 +422,9 @@ function createWindow() {
     mainWindow.show()
     
     // Check for updates after window is ready
-    if (!is.dev) {
+  
       autoUpdater.checkForUpdatesAndNotify()
-    }
+    
   })
 
   mainWindow.webContents.setWindowOpenHandler((details) => {
