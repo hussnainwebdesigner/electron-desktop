@@ -82,7 +82,7 @@ const App = () => {
   };
 
   return (
-    <div className="h-screen bg-gray-300 flex flex-col overflow-hidden">
+    <div className="h-screen bg-gray-900 flex flex-col overflow-hidden">
       <TitleBar setPageNavigate={handleNavigation} />
       <div className="flex-1 overflow-y-auto ">
         <div className="mt-2 ">
